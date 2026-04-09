@@ -449,30 +449,52 @@
     }
 
     /* ── Responsive ── */
-    @media (min-width: 480px) {
-      .trust-grid { grid-template-columns: repeat(4, 1fr); }
-      .areas-grid { grid-template-columns: repeat(3, 1fr); }
-    }
+
+    /* 640px: 2-col services, why, footer; 3-col areas */
     @media (min-width: 640px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid      { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid   { grid-template-columns: repeat(2, 1fr); }
+      .areas-grid    { grid-template-columns: repeat(3, 1fr); }
     }
+    /* 768px: show nav, 4-col trust & areas, hide mobile bar */
     @media (min-width: 768px) {
-      .nav { display: flex; }
-      .areas-grid { grid-template-columns: repeat(4, 1fr); }
+      .nav                         { display: flex; }
+      .trust-grid                  { grid-template-columns: repeat(4, 1fr); }
+      .areas-grid                  { grid-template-columns: repeat(4, 1fr); }
+      .mobile-call-bar             { display: none; }
     }
+    /* 1024px: 3-col services, 4-col why, full-width footer */
     @media (min-width: 1024px) {
       .services-grid { grid-template-columns: repeat(3, 1fr); }
-      .why-grid { grid-template-columns: repeat(4, 1fr); }
-      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+      .why-grid      { grid-template-columns: repeat(4, 1fr); }
+      .footer-grid   { grid-template-columns: 2fr 1fr 1fr 1fr; }
     }
-    @media (min-width: 768px) {
-      .mobile-call-bar { display: none; }
-    }
-    /* Add padding to body on mobile so content isn't hidden behind bar */
+
+    /* ── Mobile overrides (≤767px) ── */
     @media (max-width: 767px) {
-      body { padding-bottom: 56px; }
+      body { padding-bottom: 56px; overflow-x: hidden; }
+
+      /* Header: wrap logo + buttons onto two lines */
+      .header-inner        { flex-wrap: wrap; padding: 10px 16px; gap: 6px; }
+      .logo                { flex: 1; }
+      .header-buttons      { width: 100%; gap: 8px; }
+      .header-buttons .btn { flex: 1; font-size: 13px; padding: 9px 8px; justify-content: center; }
+
+      /* Hero: tighter padding, stacked CTAs */
+      .hero                { padding: 52px 20px; min-height: auto; }
+      .hero-buttons        { flex-direction: column; align-items: stretch; gap: 10px; }
+      .hero-buttons .btn   { width: 100%; }
+
+      /* Trust: 2×2 */
+      .trust-grid          { grid-template-columns: repeat(2, 1fr); }
+
+      /* Services & Why: single column */
+      .services-grid       { grid-template-columns: 1fr; }
+      .why-grid            { grid-template-columns: 1fr; }
+
+      /* Areas: 2 columns */
+      .areas-grid          { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
