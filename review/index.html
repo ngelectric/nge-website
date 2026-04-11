@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":["LocalBusiness","Electrician"],"@id":"https://newgroundelectric.com/#business","name":"New Ground Electric Inc.","url":"https://newgroundelectric.com","telephone":"+19513052219","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"47","bestRating":"5"}}
   </script>
@@ -66,5 +67,7 @@
   const header=document.getElementById('header');
   window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>10));
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:700,offset:80,once:true});</script>
 </body>
 </html>
