@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":["LocalBusiness","Electrician"],"@id":"https://newgroundelectric.com/#business","name":"New Ground Electric Inc.","url":"https://newgroundelectric.com","telephone":"+19517564030","email":"info@newgroundelectric.com","address":{"@type":"PostalAddress","addressLocality":"Temecula","addressRegion":"CA","postalCode":"92590","addressCountry":"US"},"areaServed":{"@type":"City","name":"San Marcos"},"openingHours":["Mo-Fr 07:00-18:00","Sa 08:00-14:00"],"priceRange":"$$"}
+  {"@context":"https://schema.org","@type":["LocalBusiness","Electrician"],"@id":"https://newgroundelectric.com/#business","name":"New Ground Electric Inc.","url":"https://newgroundelectric.com","telephone":"+19517564030","email":"info@newgroundelectric.com","address":{"@type":"PostalAddress","addressLocality":"Temecula","addressRegion":"CA","postalCode":"92590","addressCountry":"US"},"areaServed":{"@type":"City","name":"San Marcos"},"openingHours":["Mo-Sa 07:00-18:00"],"priceRange":"$$"}
   </script>
 </head>
 <body>
@@ -43,7 +43,7 @@
   </div>
 </header>
 
-<section class="page-hero">
+<section class="page-hero" style="background-image:linear-gradient(rgba(26,58,42,0.88),rgba(26,58,42,0.75)),url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&q=80');background-size:cover;background-position:center;">
   <div class="container">
     <nav class="breadcrumb"><a href="/">Home</a> &rsaquo; Areas &rsaquo; San Marcos</nav>
     <h1>Electrician in San Marcos, CA</h1>
@@ -133,21 +133,30 @@
         <li><a href="/review/index.html">Reviews</a></li>
       </ul></div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2025 New Ground Electric Inc. All rights reserved. CA C-10 License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a></p></div>
+    <div class="footer-bottom"><p>&copy; 2026 New Ground Electric Inc. All rights reserved. CA C-10 License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a></p></div>
   </div>
 </footer>
 <div class="mobile-call-bar"><a href="tel:+19517564030">&#x1f4de; Call (951) 756-4030</a></div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:700,offset:80,once:true});</script>
 <script>const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>10));</script>
-<script>(function(){var s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="F-tWBDdVmUTSLhq-sOJH_";s.domain="www.chatbase.co";document.body.appendChild(s);})();</script>
+
 <script>
-(function(){
-  var hb = document.getElementById('hamburger');
-  var nl = document.querySelector('.nav-links');
-  if (hb && nl) {
-    hb.addEventListener('click', function(){
-      nl.classList.toggle('open');
+(function() {
+  var btn = document.getElementById('hamburger');
+  var nav = document.querySelector('.nav-links');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      btn.classList.toggle('active');
+      nav.classList.toggle('open');
+      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+    });
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        btn.classList.remove('active');
+        nav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
     });
   }
 })();

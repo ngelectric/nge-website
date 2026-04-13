@@ -14,9 +14,9 @@
   {
     "@context":"https://schema.org",
     "@graph":[
-      {"@type":["LocalBusiness","Electrician"],"@id":"https://newgroundelectric.com/#business","name":"New Ground Electric Inc.","url":"https://newgroundelectric.com","telephone":"+19517564030","email":"info@newgroundelectric.com","address":{"@type":"PostalAddress","addressLocality":"Temecula","addressRegion":"CA","postalCode":"92590","addressCountry":"US"},"openingHours":["Mo-Fr 07:00-18:00","Sa 08:00-14:00"],"priceRange":"$$"},
+      {"@type":["LocalBusiness","Electrician"],"@id":"https://newgroundelectric.com/#business","name":"New Ground Electric Inc.","url":"https://newgroundelectric.com","telephone":"+19517564030","email":"info@newgroundelectric.com","address":{"@type":"PostalAddress","addressLocality":"Temecula","addressRegion":"CA","postalCode":"92590","addressCountry":"US"},"openingHours":["Mo-Sa 07:00-18:00"],"priceRange":"$$"},
       {"@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"How much does EV charger installation cost in Temecula?","acceptedAnswer":{"@type":"Answer","text":"Level 2 EV charger installation in Temecula typically ranges from $500–$1,500 depending on panel capacity, wire run distance, and permit fees. We provide flat-rate written quotes before any work begins."}},
+        {"@type":"Question","name":"How much does EV charger installation cost in Temecula?","acceptedAnswer":{"@type":"Answer","text":"Level 2 EV charger installation in Temecula typically ranges from $900–$2,500 depending on panel capacity, wire run distance, and permit fees. We provide flat-rate written quotes before any work begins."}},
         {"@type":"Question","name":"Do I need a permit for an EV charger in Temecula?","acceptedAnswer":{"@type":"Answer","text":"Yes. The City of Temecula and Riverside County require an electrical permit for Level 2 EVSE installation. New Ground Electric pulls all required permits and schedules the inspection on your behalf."}},
         {"@type":"Question","name":"Can my current panel handle an EV charger?","acceptedAnswer":{"@type":"Answer","text":"Most modern 200A panels have enough capacity. Older 100A service panels may require an upgrade first. We assess your panel during the quote visit and advise you honestly."}},
         {"@type":"Question","name":"What's the difference between Level 1 and Level 2 charging?","acceptedAnswer":{"@type":"Answer","text":"Level 1 uses a standard 120V outlet and adds about 3–5 miles of range per hour. Level 2 uses 240V and adds 20–30 miles per hour — a full charge overnight for most EVs."}}
@@ -155,7 +155,7 @@
     </div>
     <div class="cost-card">
       <h3>Typical Range — Temecula Area</h3>
-      <div class="cost-range">$500 – $1,500</div>
+      <div class="cost-range">$900 – $2,500</div>
       <p class="cost-disclaimer">Installed, permitted, and inspected. Price depends on:</p>
       <ul class="cost-factors">
         <li>Distance from panel to installation location</li>
@@ -178,7 +178,7 @@
     <div class="faq-list" data-aos="fade-up">
       <div class="faq-item">
         <button class="faq-trigger">How much does EV charger installation cost in Temecula? <span class="faq-chevron">▾</span></button>
-        <div class="faq-body"><p>Level 2 EV charger installation in Temecula typically ranges from $500–$1,500 depending on panel capacity, wire run distance, and permit fees. We provide flat-rate written quotes before any work begins.</p></div>
+        <div class="faq-body"><p>Level 2 EV charger installation in Temecula typically ranges from $900–$2,500 depending on panel capacity, wire run distance, and permit fees. We provide flat-rate written quotes before any work begins.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-trigger">Do I need a permit for an EV charger in Temecula? <span class="faq-chevron">▾</span></button>
@@ -251,7 +251,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 New Ground Electric Inc. All rights reserved. CA C-10 License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a></p>
+      <p>© 2026 New Ground Electric Inc. All rights reserved. CA C-10 License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a></p>
     </div>
   </div>
 </footer>
@@ -272,14 +272,23 @@
     });
   });
 </script>
-<script>(function(){var s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="F-tWBDdVmUTSLhq-sOJH_";s.domain="www.chatbase.co";document.body.appendChild(s);})();</script>
+
 <script>
-(function(){
-  var hb = document.getElementById('hamburger');
-  var nl = document.querySelector('.nav-links');
-  if (hb && nl) {
-    hb.addEventListener('click', function(){
-      nl.classList.toggle('open');
+(function() {
+  var btn = document.getElementById('hamburger');
+  var nav = document.querySelector('.nav-links');
+  if (btn && nav) {
+    btn.addEventListener('click', function() {
+      btn.classList.toggle('active');
+      nav.classList.toggle('open');
+      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+    });
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        btn.classList.remove('active');
+        nav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
     });
   }
 })();
