@@ -16,12 +16,12 @@
 </head>
 <body>
 
-<div class="announcement-bar">CA C-10 Licensed &amp; Insured — License #1153189 &nbsp;|&nbsp; Serving Temecula &amp; San Diego County</div>
+<div class="announcement-bar">CA C-10 Licensed Electrician — License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a> &nbsp;|&nbsp; Serving Temecula &amp; San Diego County &nbsp;|&nbsp; (951) 756-4030</div>
 
 <header class="header" id="header">
   <div class="container">
     <nav class="nav">
-      <a href="/" class="nav-logo"><span class="logo-mark">⚡</span><span class="logo-text">New Ground Electric</span></a>
+      <a href="/"><img src="../images/nge-logo-transparent_5b2df02c.png" alt="New Ground Electric" class="nav-logo"></a>
       <ul class="nav-links">
         <li><a href="/" class="nav-link">Home</a></li>
         <li class="nav-item has-dropdown">
@@ -40,11 +40,12 @@
         <li><a href="/contact.html" class="nav-link">Contact</a></li>
       </ul>
       <a href="tel:+19517564030" class="btn btn-amber btn-sm nav-cta">Call (951) 756-4030</a>
+<button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </nav>
   </div>
 </header>
 
-<section class="page-hero">
+<section class="page-hero" style="background-image:linear-gradient(rgba(26,58,42,0.88),rgba(26,58,42,0.75)),url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80');background-size:cover;background-position:center;">
   <div class="container">
     <nav class="breadcrumb"><a href="/">Home</a> › <a href="/#services">Services</a> › Troubleshooting &amp; Repairs</nav>
     <h1>Electrical Troubleshooting<br>&amp; Repairs in Temecula</h1>
@@ -151,7 +152,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">⚡ New Ground Electric</div>
-        <p>Temecula's precision residential electrician. CA C-10 Licensed #1153189.</p>
+        <p>Temecula's precision residential electrician. CA C-10 Licensed <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a>.</p>
         <div class="footer-emergency"><strong>📞 (951) 756-4030</strong><br><a href="mailto:info@newgroundelectric.com">info@newgroundelectric.com</a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul>
@@ -177,7 +178,7 @@
         <li><a href="/review/index.html">Reviews</a></li>
       </ul></div>
     </div>
-    <div class="footer-bottom"><p>© 2025 New Ground Electric Inc. All rights reserved. CA C-10 License #1153189</p></div>
+    <div class="footer-bottom"><p>© 2025 New Ground Electric Inc. All rights reserved. CA C-10 License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a></p></div>
   </div>
 </footer>
 
@@ -186,5 +187,16 @@
 <script>AOS.init({duration:700,offset:80,once:true});</script>
 <script>const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>10));</script>
 <script>(function(){var s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="F-tWBDdVmUTSLhq-sOJH_";s.domain="www.chatbase.co";document.body.appendChild(s);})();</script>
+<script>
+(function(){
+  var hb = document.getElementById('hamburger');
+  var nl = document.querySelector('.nav-links');
+  if (hb && nl) {
+    hb.addEventListener('click', function(){
+      nl.classList.toggle('open');
+    });
+  }
+})();
+</script>
 </body>
 </html>

@@ -15,11 +15,11 @@
   </script>
 </head>
 <body>
-<div class="announcement-bar">CA C-10 Licensed &amp; Insured — License #1153189 &nbsp;|&nbsp; Serving Temecula &amp; San Diego County</div>
+<div class="announcement-bar">CA C-10 Licensed Electrician — License <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a> &nbsp;|&nbsp; Serving Temecula &amp; San Diego County &nbsp;|&nbsp; (951) 756-4030</div>
 <header class="header" id="header">
   <div class="container">
     <nav class="nav">
-      <a href="/" class="nav-logo"><span class="logo-mark">⚡</span><span class="logo-text">New Ground Electric</span></a>
+      <a href="/"><img src="../images/nge-logo-transparent_5b2df02c.png" alt="New Ground Electric" class="nav-logo"></a>
       <ul class="nav-links">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/about.html" class="nav-link">About</a></li>
@@ -27,6 +27,7 @@
         <li><a href="/contact.html" class="nav-link">Contact</a></li>
       </ul>
       <a href="tel:+19517564030" class="btn btn-amber btn-sm nav-cta">Call (951) 756-4030</a>
+<button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </nav>
   </div>
 </header>
@@ -120,7 +121,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo">⚡ New Ground Electric</div><p>CA C-10 Licensed #1153189.</p><div class="footer-emergency"><strong>📞 (951) 756-4030</strong></div></div>
+      <div class="footer-brand"><div class="footer-logo">⚡ New Ground Electric</div><p>CA C-10 Licensed <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">#1153189</a>.</p><div class="footer-emergency"><strong>📞 (951) 756-4030</strong></div></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="../services/ev-charger-installation.html">EV Charger Installation</a></li><li><a href="../services/panel-upgrades.html">Panel Upgrades</a></li></ul></div>
       <div class="footer-col"><h4>Blog</h4><ul><li><a href="index.html">All Articles</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="/contact.html">Contact</a></li></ul></div>
@@ -133,5 +134,16 @@
 <script>(function(){var s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="F-tWBDdVmUTSLhq-sOJH_";s.domain="www.chatbase.co";document.body.appendChild(s);})();</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:700,offset:80,once:true});</script>
+<script>
+(function(){
+  var hb = document.getElementById('hamburger');
+  var nl = document.querySelector('.nav-links');
+  if (hb && nl) {
+    hb.addEventListener('click', function(){
+      nl.classList.toggle('open');
+    });
+  }
+})();
+</script>
 </body>
 </html>
