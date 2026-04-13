@@ -1,3 +1,11 @@
+/* Logo Size Fix */
+.nav-logo {
+    height: 56px !important;
+    width: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
 /* ═══════════════════════════════════════════════
    NEW GROUND ELECTRIC — COMPLETE DESIGN SYSTEM
    ═══════════════════════════════════════════════ */
