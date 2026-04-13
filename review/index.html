@@ -4,125 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leave a Review | New Ground Electric</title>
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/png" href="../images/nge-logo-transparent_5b2df02c.png">
-<link rel="apple-touch-icon" href="../images/nge-logo-transparent_5b2df02c.png">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #1a3a2a;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-  }
-  .card {
-    background: white;
-    border-radius: 16px;
-    padding: 48px 40px;
-    max-width: 480px;
-    width: 100%;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.3);
-  }
-  .logo { height: 64px; margin: 0 auto 24px; }
-  h1 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #1a3a2a;
-    margin-bottom: 8px;
-  }
-  p {
-    color: #6b7280;
-    margin-bottom: 32px;
-    line-height: 1.6;
-    font-size: 15px;
-  }
-  .btn {
-    display: inline-block;
-    background: #f59e0b;
-    color: white;
-    font-weight: 700;
-    font-size: 17px;
-    padding: 16px 32px;
-    border-radius: 999px;
-    text-decoration: none;
-    margin-bottom: 16px;
-    transition: background 0.2s;
-  }
-  .btn:hover { background: #d97706; }
-  .stars {
-    font-size: 28px;
-    margin-bottom: 16px;
-    letter-spacing: 4px;
-  }
-  .qr-section {
-    border-top: 1px solid #e5e7eb;
-    padding-top: 28px;
-    margin-top: 8px;
-  }
-  .qr-label {
-    font-size: 12px;
-    color: #9ca3af;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  #countdown {
-    font-size: 13px;
-    color: #9ca3af;
-    margin-top: 12px;
-    margin-bottom: 0;
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:sans-serif;background:#1a3a2a;
+min-height:100vh;display:flex;align-items:center;
+justify-content:center;padding:24px}
+.card{background:white;border-radius:16px;
+padding:40px;max-width:460px;width:100%;
+text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.logo{height:56px;margin-bottom:20px}
+.stars{font-size:32px;margin-bottom:16px;letter-spacing:4px}
+h1{font-size:24px;font-weight:700;color:#1a3a2a;margin-bottom:10px}
+p{color:#6b7280;font-size:15px;line-height:1.6;margin-bottom:24px}
+.btn{display:inline-block;background:#f59e0b;color:white;
+font-weight:700;font-size:16px;padding:14px 32px;
+border-radius:999px;text-decoration:none;margin-bottom:20px}
+#countdown{font-size:13px;color:#9ca3af;margin-bottom:28px}
+.qr-wrap{border-top:1px solid #e5e7eb;padding-top:24px}
+.qr-label{font-size:11px;color:#9ca3af;text-transform:uppercase;
+letter-spacing:0.5px;margin-bottom:12px}
+#qrcode{margin:0 auto;width:160px}
 </style>
 </head>
 <body>
 <div class="card">
-  <img src="../images/nge-logo-transparent_5b2df02c.png" alt="New Ground Electric" class="logo">
+  <img class="logo" src="../images/nge-logo-transparent_5b2df02c.png" alt="New Ground Electric">
   <div class="stars">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</div>
   <h1>Thank You for Your Business!</h1>
-  <p>Your experience matters. A quick Google review helps other Temecula homeowners find trusted electrical service &mdash; and it means the world to us.</p>
-  <a href="https://g.page/r/CWbAjAm94wfVEAE/review" class="btn" id="reviewBtn">
+  <p>A quick Google review helps Temecula homeowners find trusted electrical service &mdash; and means the world to us.</p>
+  <a class="btn" id="reviewBtn" href="https://g.page/r/CWbAjAm94wfVEAE/review">
     &#x2B50; Leave a 5-Star Review
   </a>
   <p id="countdown">Redirecting in 5 seconds...</p>
-  <div class="qr-section">
-    <p class="qr-label">Scan to leave a review</p>
-    <div id="qrcode" style="margin:0 auto;width:160px;"></div>
+  <div class="qr-wrap">
+    <p class="qr-label">Scan to review on Google</p>
+    <div id="qrcode"></div>
   </div>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-const REVIEW_URL = 'https://g.page/r/CWbAjAm94wfVEAE/review';
-
-try {
-  new QRCode(document.getElementById('qrcode'), {
-    text: REVIEW_URL,
-    width: 160,
-    height: 160,
-    colorDark: '#1a3a2a',
-    colorLight: '#ffffff',
-    correctLevel: QRCode.CorrectLevel.H
-  });
-} catch(e) {
-  document.getElementById('qrcode').innerHTML = '<p style="font-size:12px;color:#9ca3af;">QR code unavailable</p>';
-}
-
-let seconds = 5;
-const countdown = document.getElementById('countdown');
-const timer = setInterval(function() {
-  seconds--;
-  if (seconds > 0) {
-    countdown.textContent = 'Redirecting in ' + seconds + ' seconds...';
-  } else {
-    countdown.textContent = 'Redirecting now...';
-    clearInterval(timer);
-    window.location.href = REVIEW_URL;
-  }
-}, 1000);
+var URL='https://g.page/r/CWbAjAm94wfVEAE/review';
+try{new QRCode(document.getElementById('qrcode'),{text:URL,width:160,height:160,colorDark:'#1a3a2a',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});}catch(e){}
+var s=5;
+var t=setInterval(function(){
+  s--;
+  var el=document.getElementById('countdown');
+  if(el) el.textContent=s>0?'Redirecting in '+s+' seconds...':'Redirecting...';
+  if(s<=0){clearInterval(t);window.location.href=URL;}
+},1000);
 </script>
 </body>
 </html>
