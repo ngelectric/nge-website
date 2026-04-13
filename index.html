@@ -572,6 +572,49 @@
     });
   }
 })();
+<script>
+  // Mobile Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  // Header Shadow on Scroll
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (header) {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }
+  });
+
+  // Chatbase Embed
+  (function() {
+    var s = document.createElement("script");
+    s.src = "https://www.chatbase.co/embed.min.js";
+    s.id = "F-tWBDdVmUTSLhq-sOJH_";
+    s.domain = "www.chatbase.co";
+    document.body.appendChild(s);
+  })();
+
+  // Mobile Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  // Header Shadow on Scroll
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (header) {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }
+  });
 </script>
 </body>
 </html>
