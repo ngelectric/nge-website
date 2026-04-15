@@ -409,12 +409,12 @@ section { padding: 64px 0; }
 .contact-card a:hover { color: #1a3a2a; }
 
 /* ── Process/feature cards (FIX 6) ── */
-.process-card, .feature-card, .install-card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 28px 24px; width: 100%; text-align: left; }
-.process-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; width: 100%; }
-@media (max-width: 768px) { .process-grid { grid-template-columns: 1fr; } }
-.process-number { font-size: 36px; font-weight: 800; color: #e8f0eb; line-height: 1; margin-bottom: 8px; }
-.process-card h3 { font-size: 17px; font-weight: 700; color: #1a3a2a; margin-bottom: 8px; }
-.process-card p { font-size: 14px; color: #6b7280; line-height: 1.6; }
+.process-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 24px !important; width: 100% !important; max-width: 100% !important; }
+@media (max-width: 900px) { .process-grid { grid-template-columns: 1fr !important; } }
+.process-card, .install-card { background: white !important; border: 1.5px solid #e5e7eb !important; border-radius: 12px !important; padding: 28px 24px !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; width: 100% !important; min-width: 0 !important; overflow: hidden !important; box-sizing: border-box !important; }
+.process-number { font-size: 40px !important; font-weight: 800 !important; color: #e8f0eb !important; line-height: 1 !important; margin-bottom: 12px !important; display: block !important; }
+.process-card h3 { font-size: 17px !important; font-weight: 700 !important; color: #1a3a2a !important; margin-bottom: 10px !important; word-wrap: break-word !important; white-space: normal !important; }
+.process-card p { font-size: 14px !important; color: #6b7280 !important; line-height: 1.7 !important; word-wrap: break-word !important; white-space: normal !important; overflow-wrap: break-word !important; }
 
 /* ── Mobile overflow fixes (FIX 8) ── */
 @media (max-width: 768px) {
@@ -427,3 +427,42 @@ section { padding: 64px 0; }
 
 /* ── Service hero buttons (FIX 5) ── */
 .service-hero-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
+
+/* ── btn-outline inside dark (page-hero) sections ── */
+.page-hero .btn-outline,
+.hero .btn-outline {
+  border: 2px solid rgba(255,255,255,0.75);
+  color: white;
+  background: transparent;
+}
+.page-hero .btn-outline:hover,
+.hero .btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: white;
+}
+/* btn-outline-dark for white-background sections */
+.btn-outline-dark { border: 2px solid #1a3a2a; color: #1a3a2a; background: transparent; padding: 13px 28px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; display: inline-block; transition: all 0.2s; }
+.btn-outline-dark:hover { background: #1a3a2a; color: white; }
+
+/* ── Project card text (FIX 5) ── */
+.proj-loc { font-weight: 700; font-size: 16px; color: white; margin-bottom: 4px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); text-align: left; }
+.proj-desc { font-size: 13px; color: rgba(255,255,255,0.9); text-shadow: 0 1px 4px rgba(0,0,0,0.5); text-align: left; }
+.section-sub { text-align: center; }
+@media (max-width: 768px) {
+  .proj-loc { font-size: 14px; }
+  .projects-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 480px) { .projects-grid { grid-template-columns: 1fr; } }
+
+/* ── Hamburger mobile override (FIX 1) ── */
+@media (max-width: 768px) {
+  .hamburger { display: flex !important; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 9999; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: #1a3a2a; border-radius: 2px; transition: all 0.3s; pointer-events: none; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-links { display: none !important; }
+  .nav-links.open { display: flex !important; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: white; flex-direction: column; align-items: center; justify-content: center; gap: 32px; z-index: 9998; padding: 20px; }
+  .nav-links.open a { font-size: 22px; font-weight: 700; color: #1a3a2a; text-decoration: none; padding: 8px 0; }
+  .nav-links.open .nav-cta { display: none; }
+}
