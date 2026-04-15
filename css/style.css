@@ -466,3 +466,80 @@ section { padding: 64px 0; }
   .nav-links.open a { font-size: 22px; font-weight: 700; color: #1a3a2a; text-decoration: none; padding: 8px 0; }
   .nav-links.open .nav-cta { display: none; }
 }
+
+/* ── TOP BAR ── */
+.top-bar { background: #1a3a2a; color: rgba(255,255,255,0.85); font-size: 12px; padding: 7px 0; letter-spacing: 0.3px; }
+.top-bar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+@media (max-width: 600px) { .top-bar-inner span:first-child { display: none; } .top-bar { text-align: center; } }
+
+/* ── MAIN HEADER ── */
+.site-header { position: sticky; top: 0; z-index: 900; background: white; border-bottom: 1px solid #e5e7eb; transition: box-shadow 0.3s ease; }
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+.header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 68px; }
+
+/* ── BRAND ── */
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.nav-logo { height: 40px; width: auto; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-name { font-size: 17px; font-weight: 700; color: #1a3a2a; white-space: nowrap; }
+.brand-tag { font-size: 10px; color: #f59e0b; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; text-transform: uppercase; }
+
+/* ── NAV CENTER ── */
+.nav-links { display: flex !important; align-items: center; gap: 4px; flex: 1; justify-content: center; flex-direction: row; list-style: none; }
+.nav-links a { padding: 8px 12px; font-size: 14px; font-weight: 500; color: #374151; text-decoration: none; border-radius: 6px; transition: color 0.2s, background 0.2s; white-space: nowrap; }
+.nav-links a:hover { color: #1a3a2a; background: #f0f4f1; }
+
+/* ── DROPDOWN ── */
+.nav-dropdown { position: relative; }
+.nav-drop-btn { background: none; border: none; padding: 8px 12px; font-size: 14px; font-weight: 500; color: #374151; cursor: pointer; border-radius: 6px; transition: color 0.2s, background 0.2s; white-space: nowrap; font-family: inherit; }
+.nav-drop-btn:hover { color: #1a3a2a; background: #f0f4f1; }
+.nav-drop-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 8px; min-width: 220px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 100; }
+.nav-dropdown:hover .nav-drop-menu { display: block; }
+.nav-drop-menu a { display: block; padding: 9px 12px; font-size: 14px; color: #374151; text-decoration: none; border-radius: 6px; transition: background 0.15s; white-space: nowrap; }
+.nav-drop-menu a:hover { background: #f0f4f1; color: #1a3a2a; }
+
+/* ── RIGHT CTA ── */
+.header-cta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-phone { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: #1a3a2a; text-decoration: none; white-space: nowrap; }
+.header-phone:hover { color: #f59e0b; }
+.header-btn { background: #f59e0b; color: white; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+.header-btn:hover { background: #d97706; }
+
+/* ── HAMBURGER ── */
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 9999; flex-shrink: 0; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #1a3a2a; border-radius: 2px; transition: all 0.3s; pointer-events: none; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE OVERRIDES (new header) ── */
+@media (max-width: 900px) {
+  .nav-links { display: none !important; position: fixed; inset: 0; background: white; flex-direction: column !important; align-items: center; justify-content: center; gap: 8px; z-index: 9998; padding: 80px 24px 40px; }
+  .nav-links.open { display: flex !important; }
+  .nav-links a { font-size: 20px; font-weight: 600; padding: 12px 24px; width: 100%; text-align: center; }
+  .nav-drop-btn { font-size: 20px; font-weight: 600; padding: 12px 24px; width: 100%; text-align: center; display: block; }
+  .nav-drop-menu { display: block; position: static; box-shadow: none; border: none; border-top: 1px solid #f3f4f6; border-radius: 0; padding: 4px 0; min-width: unset; width: 100%; }
+  .nav-drop-menu a { text-align: center; font-size: 16px; color: #6b7280; }
+  .header-cta { display: none; }
+  .hamburger { display: flex; }
+  .brand-tag { display: none; }
+}
+
+/* ── Hero tagline ── */
+.hero-tagline { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #f59e0b; margin-bottom: 16px; margin-top: -8px; }
+
+/* ── Project card clickable ── */
+a.proj-link { text-decoration: none; display: block; }
+a.proj-link .proj-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+a.proj-link:hover .proj-card { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+
+/* ── Gallery ── */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+@media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+.gallery-card { border-radius: 12px; overflow: hidden; background: #1a3a2a; aspect-ratio: 4/3; position: relative; cursor: pointer; }
+.gallery-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-placeholder { width: 100%; height: calc(100% - 60px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.4); font-size: 13px; }
+.gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26,58,42,0.95); padding: 10px 14px; display: flex; flex-direction: column; gap: 2px; }
+.gallery-loc { font-weight: 700; font-size: 14px; color: white; }
+.gallery-job { font-size: 12px; color: rgba(255,255,255,0.7); }
