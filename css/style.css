@@ -750,7 +750,7 @@ section { padding: 64px 0; }
   .brand-tag { display: none; }
   .header-inner { height: 60px; }
 }
-@media (max-width: 480px) {
+@media (max-width: 360px) {
   .sticky-text-btn span { display: none; }
   .sticky-text-btn {
     padding: 14px;
@@ -840,3 +840,55 @@ section { padding: 64px 0; }
 a.proj-link { text-decoration: none; display: block; }
 a.proj-link .proj-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
 a.proj-link:hover .proj-card { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+
+/* ═══ DISCOUNT BANNER ═══ */
+.discount-banner {
+  background: linear-gradient(135deg, #1a3a2a 0%, #0e2419 100%);
+  padding: 18px 20px;
+  border-bottom: 3px solid #f59e0b;
+}
+.discount-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.discount-badge {
+  background: rgba(245,158,11,0.2);
+  border: 1px solid rgba(245,158,11,0.5);
+  color: #f59e0b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.discount-banner p {
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+.discount-banner strong {
+  color: white;
+}
+.discount-btn {
+  background: #f59e0b;
+  color: #1a3a2a;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.discount-btn:hover { background: #d97706; }
