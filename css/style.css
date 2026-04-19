@@ -892,3 +892,9 @@ a.proj-link:hover .proj-card { transform: translateY(-4px); box-shadow: 0 12px 3
   transition: background 0.2s;
 }
 .discount-btn:hover { background: #d97706; }
+
+@media (max-width: 640px) {
+  section p[style*="font-size:34px"] {
+    font-size: 26px !important;
+  }
+}
