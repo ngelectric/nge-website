@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Honoring Military &amp; First Responders | New Ground Electric</title>
 <meta name="description" content="New Ground Electric honors the military, veterans, police, and firefighters of Southern California with a 10% discount on all electrical services.">
 <link rel="canonical" href="https://newgroundelectric.com/blog/military-first-responder-appreciation.html">
@@ -12,6 +12,10 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HKCZGH2B19');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://www.chatbase.co">
+  <link rel="dns-prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
@@ -86,7 +90,7 @@
 <section style="padding:64px 0;background:white;">
   <div class="container" style="max-width:780px;">
 
-    <img src="https://images.pexels.com/photos/1340504/pexels-photo-1340504.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="American flag honoring those who serve" style="width:100%;border-radius:10px;margin-bottom:40px;object-fit:cover;max-height:400px;">
+    <img src="https://images.pexels.com/photos/1340504/pexels-photo-1340504.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="American flag honoring those who serve" style="width:100%;border-radius:10px;margin-bottom:40px;object-fit:cover;max-height:400px;" loading="lazy">
 
     <p style="font-size:17px;color:#374151;line-height:1.8;margin-bottom:24px;">When I started New Ground Electric, I made a promise to myself: this business would reflect the values I believe in. Integrity, hard work, and gratitude. One of the most meaningful ways I can express that gratitude is by honoring the men and women who dedicate their lives to protecting and serving our communities.</p>
 
@@ -98,7 +102,7 @@
 
     <p style="font-size:17px;color:#374151;line-height:1.8;margin-bottom:24px;">First responders hold our communities together closer to home. The police officers patrolling San Diego streets, the firefighters stationed in Murrieta and Temecula, the paramedics responding at 3am — these are the people who show up when everything goes wrong. They deserve to be recognized.</p>
 
-    <img src="https://images.pexels.com/photos/4386470/pexels-photo-4386470.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Firefighters serving our community" style="width:100%;border-radius:10px;margin:32px 0;object-fit:cover;max-height:400px;">
+    <img src="https://images.pexels.com/photos/4386470/pexels-photo-4386470.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Firefighters serving our community" style="width:100%;border-radius:10px;margin:32px 0;object-fit:cover;max-height:400px;" loading="lazy">
 
     <h2 style="font-size:26px;font-weight:700;color:#1a3a2a;margin:40px 0 16px;">What the Discount Covers</h2>
 
@@ -120,7 +124,7 @@
 
     <p style="font-size:17px;color:#374151;line-height:1.8;margin-bottom:24px;">Redeeming your discount is simple. Just mention it when you call or text, show valid credentials at time of service, and the 10% comes off your final invoice automatically. That is it.</p>
 
-    <img src="https://images.pexels.com/photos/6841631/pexels-photo-6841631.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Law enforcement officers on duty" style="width:100%;border-radius:10px;margin:32px 0;object-fit:cover;max-height:400px;">
+    <img src="https://images.pexels.com/photos/6841631/pexels-photo-6841631.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Law enforcement officers on duty" style="width:100%;border-radius:10px;margin:32px 0;object-fit:cover;max-height:400px;" loading="lazy">
 
     <h2 style="font-size:26px;font-weight:700;color:#1a3a2a;margin:40px 0 16px;">A Personal Note from Mario</h2>
 
@@ -205,8 +209,13 @@
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(args)};window.chatbase=new Proxy(window.chatbase,{get(t,p){if(p==="q")return t.q;return(...a)=>t(p,...a)}})};const onLoad=function(){const s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="F-tWBDdVmUTSLhq-sOJH_";s.domain="www.chatbase.co";document.body.appendChild(s)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({duration:700,offset:80,once:true});</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<script>AOS.init({
+  duration:600,
+  offset:60,
+  once:true,
+  disable: window.innerWidth < 768
+});</script>
 <script>
 window.addEventListener('scroll',function(){var h=document.getElementById('site-header');if(h)h.classList.toggle('scrolled',window.scrollY>10);});
 document.addEventListener('DOMContentLoaded',function(){var btn=document.getElementById('hamburger');var nav=document.getElementById('nav-links');if(!btn||!nav)return;btn.addEventListener('click',function(e){e.stopPropagation();var open=nav.classList.contains('open');nav.classList.toggle('open');btn.classList.toggle('open');btn.setAttribute('aria-expanded',String(!open));document.body.style.overflow=open?'':'hidden';});document.addEventListener('click',function(e){if(!nav.contains(e.target)&&!btn.contains(e.target)){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';});});});

@@ -9,6 +9,10 @@
   <meta name="description" content="Electrical tips, how-tos, and local news from New Ground Electric — Temecula's CA C-10 licensed electrician. EV chargers, panel upgrades, safety guides.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://www.chatbase.co">
+  <link rel="dns-prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -310,8 +314,13 @@
 </div>
 </footer>
 <div class="mobile-call-bar"><a href="tel:+19517564030">📞 Call (951) 756-4030</a></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({duration:700,offset:80,once:true});</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<script>AOS.init({
+  duration:600,
+  offset:60,
+  once:true,
+  disable: window.innerWidth < 768
+});</script>
 <a href="sms:+19517564030" class="sticky-text-btn" aria-label="Text us"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Text Us</span></a>
 <script>
 window.addEventListener('scroll',function(){var h=document.getElementById('site-header');if(h)h.classList.toggle('scrolled',window.scrollY>10);});

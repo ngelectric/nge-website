@@ -10,6 +10,10 @@
   <link rel="canonical" href="https://newgroundelectric.com/gallery.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://www.chatbase.co">
+  <link rel="dns-prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -23,7 +27,7 @@ TO ADD REAL PHOTOS:
 1. Upload photo to images/ folder in GitHub
 2. Find the gallery-card for that job
 3. Delete the gallery-placeholder div
-4. Add: <img src="/images/filename.jpg" alt="Description, City">
+4. Add: <img src="/images/filename.jpg" alt="Description, City" loading="lazy">
 5. Update .gallery-loc and .gallery-job caption text
 6. Commit and push
 -->
@@ -84,7 +88,7 @@ TO ADD REAL PHOTOS:
   </div>
 </header>
 
-<section class="page-hero" style="background-image:linear-gradient(rgba(26,58,42,0.88),rgba(26,58,42,0.75)),url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80');background-size:cover;background-position:center;">
+<section class="page-hero" style="background-image:linear-gradient(rgba(26,58,42,0.88),rgba(26,58,42,0.75)),url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&q=75&fm=webp&auto=format&fit=crop');background-size:cover;background-position:center;">
   <div class="container">
     <nav class="breadcrumb"><a href="/">Home</a> &rsaquo; Gallery</nav>
     <h1>Our Work Speaks for Itself</h1>
@@ -114,7 +118,7 @@ TO ADD REAL PHOTOS:
         <img
           src="/images/new-ground-electric-panel-upgrade-oceanside-ca.jpg"
           alt="200A Panel Upgrade in Oceanside CA — New Ground Electric C-10 Licensed"
-          style="width:100%;height:100%;object-fit:cover;display:block;">
+          style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
         <div class="gallery-caption"><span class="gallery-loc">Oceanside, CA</span><span class="gallery-job">200A Service Upgrade</span></div>
       </div>
 
@@ -229,8 +233,13 @@ TO ADD REAL PHOTOS:
 </footer>
 
 <div class="mobile-call-bar"><a href="tel:+19517564030">&#128222; Call (951) 756-4030</a></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({duration:700,offset:80,once:true});</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<script>AOS.init({
+  duration:600,
+  offset:60,
+  once:true,
+  disable: window.innerWidth < 768
+});</script>
 <script>(function(){var s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="F-tWBDdVmUTSLhq-sOJH_";s.domain="www.chatbase.co";document.body.appendChild(s);})();</script>
 <a href="sms:+19517564030" class="sticky-text-btn" aria-label="Text us"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Text Us</span></a>
 <script>
