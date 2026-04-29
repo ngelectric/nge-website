@@ -1146,3 +1146,28 @@ a.proj-link:hover .proj-card { transform: translateY(-4px); box-shadow: 0 12px 3
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ═══ TRUST GRID 5 COLUMNS ═══ */
+.trust-grid {
+  grid-template-columns: repeat(5,1fr) !important;
+}
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: repeat(3,1fr) !important;
+  }
+}
+@media (max-width: 560px) {
+  .trust-grid {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
+
+/* ═══ BBB FLOATING SEAL POSITION ═══ */
+#bbb-seal-badge,
+#bbb_seal,
+[id*="bbb"] iframe,
+[id*="bbb"] a {
+  bottom: 100px !important;
+  right: 24px !important;
+  z-index: 887 !important;
+}
