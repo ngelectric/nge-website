@@ -116,7 +116,7 @@ section { padding: 64px 0; }
 .page-hero h1 span { color: var(--amber); }
 .page-hero .hero-sub { margin: 0 auto 32px; }
 .trust-bar { background: white; border-bottom: 1px solid #e5e7eb; padding: 28px 0; }
-.trust-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; text-align: center; }
+.trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; text-align: center; }
 .trust-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .trust-icon { width: 52px; height: 52px; background: #fff8e6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 4px; }
 .trust-icon svg { width: 28px; height: 28px; }
@@ -299,7 +299,7 @@ section { padding: 64px 0; }
 }
 @media (min-width: 769px) {
   .nav-links { display: flex; }
-  .trust-grid { grid-template-columns: repeat(5,1fr); }
+  .trust-grid { grid-template-columns: repeat(4,1fr); }
   .areas-grid { grid-template-columns: repeat(4,1fr); }
   .mobile-call-bar { display: none; }
 }
@@ -1145,22 +1145,4 @@ a.proj-link:hover .proj-card { transform: translateY(-4px); box-shadow: 0 12px 3
   .steps-grid {
     grid-template-columns: 1fr !important;
   }
-}
-@media (max-width: 900px) {
-  .trust-grid {
-    grid-template-columns: repeat(3,1fr) !important;
-  }
-}
-@media (max-width: 560px) {
-  .trust-grid {
-    grid-template-columns: repeat(2,1fr) !important;
-  }
-}
-#bbb-seal-badge { bottom: 80px !important; right: 24px !important; z-index: 887 !important; }
-#bbb_seal,
-[id*="bbb"] iframe,
-[id*="bbb"] a {
-  bottom: 100px !important;
-  right: 24px !important;
-  z-index: 887 !important;
 }
