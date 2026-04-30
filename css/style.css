@@ -1171,3 +1171,35 @@ a.proj-link:hover .proj-card { transform: translateY(-4px); box-shadow: 0 12px 3
   right: 24px !important;
   z-index: 887 !important;
 }
+
+/* ═══ BBB BADGE MOBILE HIDE ═══ */
+@media (max-width: 560px) {
+  .bbb-badge {
+    display: none !important;
+  }
+}
+
+/* ═══ MOBILE CARD OVERFLOW ═══ */
+@media (max-width: 768px) {
+  .service-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 16px !important;
+  }
+}
+
+/* ═══ SERVICES GRID DESKTOP 4 COLS ═══ */
+@media (min-width: 1025px) {
+  .services-grid {
+    grid-template-columns: repeat(4,1fr) !important;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
