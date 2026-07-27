@@ -6,50 +6,54 @@
 <title>New Ground Electric | Southern California Electrician</title>
 <meta name="description" content="Licensed C-10 Electrical Contractor serving San Diego County and the Inland Empire. Request a free estimate from New Ground Electric.">
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" type="image/png" href="images/nge-logo-transparent_5b2df02c.png">
+<link rel="icon" type="image/png" href="/images/nge-logo-transparent_5b2df02c.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
-/* ═══ CONFIG-DRIVEN — edit only the :root vars ═══ */
-:root {
-  --green: #1a3a2a;
-  --green-light: #e8f0eb;
-  --amber: #f59e0b;
-  --amber-dark: #d97706;
-  --white: #ffffff;
-  --gray: #f9fafb;
-  --border: #e5e7eb;
-  --text: #111827;
-  --muted: #6b7280;
-  --radius: 14px;
-  --shadow: 0 2px 16px rgba(0,0,0,0.08);
+:root{
+  --green:#1a3a2a;
+  --green-light:#e8f0eb;
+  --amber:#f59e0b;
+  --white:#ffffff;
+  --gray:#f9fafb;
+  --border:#e5e7eb;
+  --text:#111827;
+  --muted:#6b7280;
+  --radius:14px;
+  --shadow:0 2px 20px rgba(0,0,0,0.08);
 }
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-html,body{
+*{margin:0;padding:0;box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;}
+html{min-height:100vh;background:var(--gray);}
+body{
   font-family:'Inter',sans-serif;
-  background:var(--white);
   color:var(--text);
   min-height:100vh;
   display:flex;
-  flex-direction:column;
   align-items:center;
+  justify-content:center;
+  padding:24px 16px;
 }
-body{
-  padding:32px 20px 24px;
-  max-width:420px;
-  margin:0 auto;
+
+/* CARD */
+.card{
+  background:var(--white);
+  border-radius:24px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.10);
   width:100%;
+  max-width:460px;
+  padding:36px 32px 28px;
+  border:1px solid var(--border);
 }
 
 /* LOGO */
 .logo-wrap{
   text-align:center;
-  margin-bottom:16px;
+  margin-bottom:20px;
 }
 .logo-wrap img{
-  height:72px;
+  height:64px;
   width:auto;
   object-fit:contain;
 }
@@ -58,26 +62,32 @@ body{
 .identity{
   text-align:center;
   margin-bottom:20px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--border);
 }
 .company-name{
-  font-size:20px;
+  font-size:19px;
   font-weight:800;
   color:var(--green);
-  letter-spacing:0.5px;
+  letter-spacing:0.3px;
   margin-bottom:4px;
 }
 .tagline{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.owner-line{
   font-size:13px;
   color:var(--muted);
-  font-weight:500;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  margin-bottom:8px;
+  margin-bottom:4px;
 }
 .credential{
   font-size:12px;
   color:var(--muted);
-  line-height:1.6;
 }
 .credential a{
   color:var(--green);
@@ -87,48 +97,33 @@ body{
 /* TRUST BADGES */
 .trust-row{
   display:flex;
-  gap:8px;
+  gap:6px;
   justify-content:center;
   flex-wrap:wrap;
   margin-bottom:24px;
 }
 .trust-badge{
-  display:flex;
+  display:inline-flex;
   align-items:center;
-  gap:5px;
+  gap:4px;
   background:var(--gray);
   border:1px solid var(--border);
   border-radius:999px;
-  padding:6px 12px;
-  font-size:12px;
+  padding:5px 11px;
+  font-size:11px;
   font-weight:600;
   color:var(--green);
   white-space:nowrap;
-}
-.trust-badge.clickable{
-  cursor:pointer;
   text-decoration:none;
   transition:background 0.2s;
 }
-.trust-badge.clickable:hover,
-.trust-badge.clickable:active{
+.trust-badge:hover,
+.trust-badge:active{
   background:var(--green-light);
 }
-.trust-badge .dot{
-  color:var(--amber);
-  font-size:14px;
-}
+.trust-dot{color:var(--amber);}
 
-/* DIVIDER */
-.divider{
-  width:40px;
-  height:2px;
-  background:var(--border);
-  margin:0 auto 24px;
-  border-radius:2px;
-}
-
-/* PRIMARY CTA */
+/* PRIMARY BUTTON */
 .btn-primary{
   display:flex;
   align-items:center;
@@ -137,23 +132,20 @@ body{
   width:100%;
   background:var(--green);
   color:white;
-  padding:18px 24px;
+  padding:17px 24px;
   border-radius:var(--radius);
-  font-size:17px;
+  font-size:16px;
   font-weight:700;
   text-decoration:none;
   margin-bottom:10px;
-  box-shadow:var(--shadow);
   transition:background 0.2s,transform 0.1s;
-  min-height:58px;
+  min-height:56px;
 }
 .btn-primary:active{
   background:#0e2419;
   transform:scale(0.98);
 }
-.btn-primary .icon{
-  font-size:20px;
-}
+.btn-primary svg{flex-shrink:0;}
 
 /* SECONDARY BUTTONS */
 .btn-secondary{
@@ -164,31 +156,44 @@ body{
   width:100%;
   background:var(--white);
   color:var(--green);
-  padding:15px 24px;
+  padding:14px 24px;
   border-radius:var(--radius);
-  font-size:15px;
+  font-size:14px;
   font-weight:600;
   text-decoration:none;
-  margin-bottom:10px;
+  margin-bottom:8px;
   border:1.5px solid var(--border);
-  box-shadow:var(--shadow);
-  transition:background 0.2s,
-    border-color 0.2s,transform 0.1s;
-  min-height:52px;
+  transition:background 0.2s,transform 0.1s;
+  min-height:50px;
 }
 .btn-secondary:active{
   background:var(--gray);
   transform:scale(0.98);
 }
-.btn-secondary .icon{
-  font-size:18px;
-}
+.btn-secondary svg{flex-shrink:0;}
 .btn-secondary.review{
   border-color:#fde68a;
   background:#fffbeb;
 }
-.btn-secondary.review:active{
-  background:#fff8e6;
+
+/* DIVIDER */
+.divider{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:16px 0;
+  color:var(--muted);
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.divider::before,
+.divider::after{
+  content:'';
+  flex:1;
+  height:1px;
+  background:var(--border);
 }
 
 /* QUICK CONTACT */
@@ -196,48 +201,46 @@ body{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:8px;
-  margin-bottom:24px;
-  margin-top:4px;
+  margin-bottom:16px;
 }
 .btn-quick{
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:4px;
+  gap:5px;
   background:var(--gray);
   border:1.5px solid var(--border);
   border-radius:var(--radius);
   padding:14px 8px;
-  font-size:12px;
-  font-weight:600;
+  font-size:11px;
+  font-weight:700;
   color:var(--green);
   text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
   transition:background 0.2s,transform 0.1s;
-  min-height:64px;
+  min-height:62px;
 }
 .btn-quick:active{
   background:var(--green-light);
   transform:scale(0.97);
 }
-.btn-quick .icon{
-  font-size:20px;
-}
 
 /* SOCIAL ROW */
 .social-row{
   display:flex;
-  gap:10px;
+  gap:8px;
   justify-content:center;
-  margin-bottom:24px;
+  margin-bottom:20px;
 }
 .btn-social{
   display:flex;
   align-items:center;
-  gap:8px;
-  padding:10px 20px;
+  gap:7px;
+  padding:9px 18px;
   border-radius:999px;
-  font-size:13px;
+  font-size:12px;
   font-weight:600;
   text-decoration:none;
   border:1.5px solid var(--border);
@@ -245,12 +248,7 @@ body{
   background:var(--white);
   transition:background 0.2s;
 }
-.btn-social:active{
-  background:var(--gray);
-}
-.btn-social svg{
-  flex-shrink:0;
-}
+.btn-social:active{background:var(--gray);}
 
 /* FOOTER */
 .footer{
@@ -260,27 +258,29 @@ body{
   line-height:1.8;
   padding-top:16px;
   border-top:1px solid var(--border);
-  width:100%;
 }
 .footer a{
   color:var(--muted);
   text-decoration:none;
 }
-.footer a:hover{
-  text-decoration:underline;
+
+/* DESKTOP — wider card, subtle green left border */
+@media (min-width:640px){
+  .card{
+    max-width:520px;
+    border-left:4px solid var(--green);
+  }
 }
 </style>
 </head>
 <body>
 
 <script>
-/* ═══════════════════════════════════════
-   CONFIG — UPDATE THIS BLOCK ONLY
-   Never need to touch the HTML below
-═══════════════════════════════════════ */
 const NGE = {
   name:        "New Ground Electric",
   tagline:     "Clean • Quality • Reliable",
+  owner:       "Mario Orejel",
+  ownerTitle:  "Owner & Licensed C-10 Electrician",
   license:     "CA C-10 License #1153189",
   area:        "Serving San Diego & Inland Empire",
   phone:       "+19517564030",
@@ -294,152 +294,270 @@ const NGE = {
   tiktok:      "https://www.tiktok.com/@newgroundelectric",
   bbb:         "https://www.bbb.org/us/ca/temecula/profile/electrician/new-ground-electric-inc-1126-1000169760",
   cslb:        "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189",
-  logo:        "images/nge-logo-transparent_5b2df02c.png",
+  bond:        "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1153189",
+  logo:        "/images/nge-logo-transparent_5b2df02c.png",
   year:        new Date().getFullYear()
 };
 </script>
 
-<!-- LOGO -->
-<div class="logo-wrap">
-  <img id="logo" alt="New Ground Electric Logo">
-</div>
+<div class="card">
 
-<!-- IDENTITY -->
-<div class="identity">
-  <p class="company-name" id="companyName"></p>
-  <p class="tagline" id="tagline"></p>
-  <p class="credential" id="credential"></p>
-</div>
+  <!-- LOGO -->
+  <div class="logo-wrap">
+    <img id="logo" alt="New Ground Electric Logo">
+  </div>
 
-<!-- TRUST BADGES -->
-<div class="trust-row">
-  <a class="trust-badge clickable" id="badgeLicense" target="_blank" rel="noopener">
-    <span class="dot">✓</span> C-10 Licensed
-  </a>
-  <span class="trust-badge">
-    <span class="dot">✓</span> Fully Insured
-  </span>
-  <a class="trust-badge clickable" id="badgeBBB" target="_blank" rel="noopener">
-    <span class="dot">✓</span> BBB Accredited
-  </a>
-  <a class="trust-badge clickable" id="badgeReviewStar" target="_blank" rel="noopener">
-    <span class="dot">⭐</span> 5-Star Rated
-  </a>
-</div>
+  <!-- IDENTITY -->
+  <div class="identity">
+    <p class="company-name" id="companyName"></p>
+    <p class="tagline" id="tagline"></p>
+    <p class="owner-line" id="ownerLine"></p>
+    <p class="credential" id="credential"></p>
+  </div>
 
-<div class="divider"></div>
+  <!-- TRUST BADGES -->
+  <div class="trust-row">
+    <a class="trust-badge" id="badgeLicense"
+      target="_blank" rel="noopener">
+      <span class="trust-dot">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="#f59e0b" stroke-width="2.5"
+          width="11" height="11">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </span>
+      C-10 Licensed
+    </a>
+    <a class="trust-badge" id="badgeBond"
+      target="_blank" rel="noopener">
+      <span class="trust-dot">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="#f59e0b" stroke-width="2.5"
+          width="11" height="11">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </span>
+      Fully Insured
+    </a>
+    <a class="trust-badge" id="badgeBBB"
+      target="_blank" rel="noopener">
+      <span class="trust-dot">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="#f59e0b" stroke-width="2.5"
+          width="11" height="11">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </span>
+      BBB Accredited
+    </a>
+    <a class="trust-badge" id="badgeReview"
+      target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#f59e0b"
+        width="11" height="11">
+        <polygon points="12 2 15.09 8.26 22 9.27 
+          17 14.14 18.18 21.02 12 17.77 5.82 
+          21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      5-Star Rated
+    </a>
+  </div>
 
-<!-- PRIMARY CTA -->
-<a class="btn-primary" id="btnEstimate">
-  <span class="icon">⚡</span>
-  Request a Free Estimate
-</a>
-
-<!-- SECONDARY BUTTONS -->
-<a class="btn-secondary" id="btnInstagram" target="_blank" rel="noopener">
-  <span class="icon">📸</span>
-  View Recent Projects
-</a>
-
-<a class="btn-secondary" id="btnWebsite" target="_blank" rel="noopener">
-  <span class="icon">🌐</span>
-  Visit Our Website
-</a>
-
-<a class="btn-secondary review" id="btnReview" target="_blank" rel="noopener">
-  <span class="icon">⭐</span>
-  Leave a Google Review
-</a>
-
-<!-- QUICK CONTACT -->
-<div class="quick-row">
-  <a class="btn-quick" id="btnCall">
-    <span class="icon">📞</span>
-    Call
-  </a>
-  <a class="btn-quick" id="btnText">
-    <span class="icon">💬</span>
-    Text
-  </a>
-  <a class="btn-quick" id="btnEmail">
-    <span class="icon">✉️</span>
-    Email
-  </a>
-</div>
-
-<!-- SOCIAL ROW -->
-<div class="social-row">
-  <a class="btn-social" id="btnTikTok" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="#1a3a2a">
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/>
+  <!-- PRIMARY CTA -->
+  <a class="btn-primary" id="btnEstimate">
+    <svg viewBox="0 0 24 24" fill="none"
+      stroke="white" stroke-width="2"
+      width="20" height="20">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M13 2L4.09 12.96A1 1 0 0 0 5 
+        14.5h7l-1 7.5 8.91-10.96A1 1 0 0 0 
+        19 9.5h-7l1-7.5z"/>
     </svg>
-    TikTok
+    Request a Free Estimate
   </a>
-  <a class="btn-social" id="btnIG" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#1a3a2a" stroke-width="2">
-      <rect x="2" y="2" width="20" height="20" rx="5"/>
-      <circle cx="12" cy="12" r="4"/>
-      <circle cx="17.5" cy="6.5" r="1" fill="#1a3a2a" stroke="none"/>
-    </svg>
-    Instagram
-  </a>
-</div>
 
-<!-- FOOTER -->
-<div class="footer">
-  <p id="footerName"></p>
-  <p id="footerLicense"></p>
-  <p><a id="footerPhone"></a> &nbsp;·&nbsp; <a id="footerEmail"></a></p>
-  <p><a id="footerWebsite"></a></p>
-  <p id="footerCopy"></p>
+  <!-- SECONDARY BUTTONS -->
+  <a class="btn-secondary" id="btnProjects"
+    target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none"
+      stroke="#1a3a2a" stroke-width="2"
+      width="18" height="18">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <circle cx="8.5" cy="8.5" r="1.5"/>
+      <polyline points="21 15 16 10 5 21"/>
+    </svg>
+    View Recent Projects
+  </a>
+
+  <a class="btn-secondary" id="btnWebsite"
+    target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none"
+      stroke="#1a3a2a" stroke-width="2"
+      width="18" height="18">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 
+        15.3 15.3 0 0 1-4 10 15.3 15.3 0 
+        0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+    </svg>
+    Visit Our Website
+  </a>
+
+  <a class="btn-secondary review" id="btnReview"
+    target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#f59e0b"
+      width="18" height="18">
+      <polygon points="12 2 15.09 8.26 22 9.27 
+        17 14.14 18.18 21.02 12 17.77 5.82 
+        21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+    Leave a Google Review
+  </a>
+
+  <!-- DIVIDER -->
+  <div class="divider">Quick Contact</div>
+
+  <!-- QUICK CONTACT -->
+  <div class="quick-row">
+    <a class="btn-quick" id="btnCall">
+      <svg viewBox="0 0 24 24" fill="none"
+        stroke="#1a3a2a" stroke-width="2"
+        width="22" height="22">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 
+          2 19.79 19.79 0 0 1-8.63-3.07 19.5 
+          19.5 0 0 1-6-6 19.79 19.79 0 0 
+          1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 
+          0 0 1 2 1.72 12.84 12.84 0 0 0 .7 
+          2.81 2 2 0 0 1-.45 2.11L8.09 9.91a
+          16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 
+          1 2.11-.45 12.84 12.84 0 0 0 
+          2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      Call
+    </a>
+    <a class="btn-quick" id="btnText">
+      <svg viewBox="0 0 24 24" fill="none"
+        stroke="#1a3a2a" stroke-width="2"
+        width="22" height="22">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 
+          4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 
+          2 2z"/>
+      </svg>
+      Text
+    </a>
+    <a class="btn-quick" id="btnEmail">
+      <svg viewBox="0 0 24 24" fill="none"
+        stroke="#1a3a2a" stroke-width="2"
+        width="22" height="22">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 
+          1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c
+          0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      Email
+    </a>
+  </div>
+
+  <!-- SOCIAL ROW -->
+  <div class="social-row">
+    <a class="btn-social" id="btnTikTok"
+      target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="15"
+        height="15" fill="#1a3a2a">
+        <path d="M19.59 6.69a4.83 4.83 0 0 
+          1-3.77-4.25V2h-3.45v13.67a2.89 2.89 
+          0 0 1-2.88 2.5 2.89 2.89 0 0 
+          1-2.89-2.89 2.89 2.89 0 0 1 
+          2.89-2.89c.28 0 .54.04.79.1V9.01a
+          6.27 6.27 0 0 0-.79-.05 6.34 6.34 
+          0 0 0-6.34 6.34 6.34 6.34 0 0 0 
+          6.34 6.34 6.34 6.34 0 0 0 
+          6.33-6.34V8.69a8.18 8.18 0 0 0 
+          4.78 1.52V6.76a4.85 4.85 0 0 
+          1-1-.07z"/>
+      </svg>
+      TikTok
+    </a>
+    <a class="btn-social" id="btnIG"
+      target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="15"
+        height="15" fill="none"
+        stroke="#1a3a2a" stroke-width="2">
+        <rect x="2" y="2" width="20"
+          height="20" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1"
+          fill="#1a3a2a" stroke="none"/>
+      </svg>
+      Instagram
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p id="footerLine"></p>
+    <p id="footerCopy"></p>
+  </div>
+
 </div>
 
 <script>
 /* Wire config to DOM */
 document.getElementById('logo').src = NGE.logo;
-document.getElementById('logo').alt = NGE.name + ' Logo';
-document.getElementById('companyName').textContent = NGE.name;
-document.getElementById('tagline').textContent = NGE.tagline;
-document.getElementById('credential').innerHTML =
-  NGE.license + ' &nbsp;·&nbsp; Licensed & Insured<br>' + NGE.area;
+document.getElementById('companyName')
+  .textContent = NGE.name;
+document.getElementById('tagline')
+  .textContent = NGE.tagline;
+document.getElementById('ownerLine')
+  .textContent = NGE.owner + ' — ' + NGE.ownerTitle;
+document.getElementById('credential')
+  .innerHTML = NGE.license + 
+  ' &nbsp;·&nbsp; ' + NGE.area;
 
 /* Trust badges */
-document.getElementById('badgeLicense').href = NGE.cslb;
-document.getElementById('badgeBBB').href = NGE.bbb;
-document.getElementById('badgeReviewStar').href = NGE.review;
+document.getElementById('badgeLicense')
+  .href = NGE.cslb;
+document.getElementById('badgeBond')
+  .href = NGE.bond;
+document.getElementById('badgeBBB')
+  .href = NGE.bbb;
+document.getElementById('badgeReview')
+  .href = NGE.review;
 
 /* Primary */
-document.getElementById('btnEstimate').href = NGE.estimate;
+document.getElementById('btnEstimate')
+  .href = NGE.estimate;
 
 /* Secondary */
-document.getElementById('btnInstagram').href = NGE.instagram;
-document.getElementById('btnWebsite').href = NGE.website;
-document.getElementById('btnReview').href = NGE.review;
+document.getElementById('btnProjects')
+  .href = NGE.instagram;
+document.getElementById('btnWebsite')
+  .href = NGE.website;
+document.getElementById('btnReview')
+  .href = NGE.review;
 
 /* Quick contact */
-document.getElementById('btnCall').href = 'tel:' + NGE.phone;
-document.getElementById('btnText').href =
-  'sms:' + NGE.phone + '?body=' +
-  encodeURIComponent(NGE.smsMessage);
-document.getElementById('btnEmail').href =
-  'mailto:' + NGE.email;
+document.getElementById('btnCall')
+  .href = 'tel:' + NGE.phone;
+document.getElementById('btnText')
+  .href = 'sms:' + NGE.phone + 
+  '?body=' + encodeURIComponent(NGE.smsMessage);
+document.getElementById('btnEmail')
+  .href = 'mailto:' + NGE.email;
 
 /* Social */
-document.getElementById('btnTikTok').href = NGE.tiktok;
-document.getElementById('btnIG').href = NGE.instagram;
+document.getElementById('btnTikTok')
+  .href = NGE.tiktok;
+document.getElementById('btnIG')
+  .href = NGE.instagram;
 
 /* Footer */
-document.getElementById('footerName').textContent = NGE.name;
-document.getElementById('footerLicense').textContent = NGE.license;
-document.getElementById('footerPhone').textContent = NGE.phoneDisplay;
-document.getElementById('footerPhone').href = 'tel:' + NGE.phone;
-document.getElementById('footerEmail').textContent = NGE.email;
-document.getElementById('footerEmail').href = 'mailto:' + NGE.email;
-document.getElementById('footerWebsite').textContent = 'newgroundelectric.com';
-document.getElementById('footerWebsite').href = NGE.website;
-document.getElementById('footerCopy').textContent =
-  '© ' + NGE.year + ' ' + NGE.name +
-  ' Inc. All rights reserved.';
+document.getElementById('footerLine')
+  .innerHTML = '<a href="' + NGE.cslb + 
+  '" target="_blank">' + NGE.license + 
+  '</a>';
+document.getElementById('footerCopy')
+  .textContent = '© ' + NGE.year + 
+  ' ' + NGE.name + ' Inc.';
 </script>
 
 </body>
