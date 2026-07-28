@@ -66,28 +66,36 @@ body{
   border-bottom:1px solid var(--border);
 }
 .company-name{
-  font-size:19px;
+  font-size:20px;
   font-weight:800;
   color:var(--green);
   letter-spacing:0.3px;
-  margin-bottom:4px;
+  margin-bottom:12px;
+}
+.owner-name{
+  font-size:16px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:3px;
+}
+.owner-title{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:500;
+  margin-bottom:12px;
 }
 .tagline{
-  font-size:12px;
+  font-size:11px;
   color:var(--muted);
   font-weight:600;
   letter-spacing:1.5px;
   text-transform:uppercase;
-  margin-bottom:10px;
-}
-.owner-line{
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:4px;
+  margin-bottom:12px;
 }
 .credential{
-  font-size:12px;
+  font-size:11px;
   color:var(--muted);
+  line-height:1.7;
 }
 .credential a{
   color:var(--green);
@@ -289,7 +297,7 @@ const NGE = {
   smsMessage:  "Hi Mario, I found your card and wanted to reach out about electrical work.",
   website:     "https://newgroundelectric.com",
   estimate:    "https://newgroundelectric.com/contact.html",
-  review:      "https://newgroundelectric.com/review",
+  review:      "https://g.page/r/CWbAjAm94wfVEAE/review",
   instagram:   "https://www.instagram.com/newgroundelectric",
   tiktok:      "https://www.tiktok.com/@newgroundelectric",
   bbb:         "https://www.bbb.org/us/ca/temecula/profile/electrician/new-ground-electric-inc-1126-1000169760",
@@ -311,7 +319,9 @@ const NGE = {
   <div class="identity">
     <p class="company-name" id="companyName"></p>
     <p class="tagline" id="tagline"></p>
-    <p class="owner-line" id="ownerLine"></p>
+    <div style="width:32px;height:2px;background:var(--amber);margin:0 auto 12px;"></div>
+    <p class="owner-name" id="ownerName"></p>
+    <p class="owner-title" id="ownerTitle"></p>
     <p class="credential" id="credential"></p>
   </div>
 
@@ -507,8 +517,8 @@ document.getElementById('companyName')
   .textContent = NGE.name;
 document.getElementById('tagline')
   .textContent = NGE.tagline;
-document.getElementById('ownerLine')
-  .textContent = NGE.owner + ' — ' + NGE.ownerTitle;
+document.getElementById('ownerName').textContent = NGE.owner;
+document.getElementById('ownerTitle').textContent = NGE.ownerTitle;
 document.getElementById('credential')
   .innerHTML = NGE.license + 
   ' &nbsp;·&nbsp; ' + NGE.area;
@@ -521,7 +531,7 @@ document.getElementById('badgeBond')
 document.getElementById('badgeBBB')
   .href = NGE.bbb;
 document.getElementById('badgeReview')
-  .href = NGE.review;
+  .href = "https://www.google.com/maps/search/New+Ground+Electric+Temecula+CA";
 
 /* Primary */
 document.getElementById('btnEstimate')
